@@ -94,6 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial check and on scroll
     revealElements();
+    window.addEventListener('scroll', revealElements);
+
     // Scroll to Top Functionality
     const scrollTop = document.querySelector('.scroll-top');
     if (scrollTop) {
