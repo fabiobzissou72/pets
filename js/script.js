@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealElements = () => {
         const windowHeight = window.innerHeight;
-        const revealPoint = 100;
+        const revealPoint = 50;
 
         // Reveal fade-ups
         fadeUpElements.forEach(el => {
