@@ -905,8 +905,18 @@ img {
 }
 
 .avatar.bg-green {
-    background-color: rgba(0, 177, 113, 0.2);
+    background-color: rgba(151, 67, 152, 0.2);
     color: var(--primary-color);
+}
+
+.avatar.bg-purple {
+    background-color: rgba(209, 141, 192, 0.2);
+    color: #d18dc0;
+}
+
+.avatar.bg-yellow {
+    background-color: rgba(245, 158, 11, 0.2);
+    color: #F59E0B;
 }
 
 .card-header h4 {
