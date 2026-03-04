@@ -40,6 +40,10 @@
 
     --font-heading: 'Outfit', sans-serif;
     --font-body: 'Inter', sans-serif;
+
+    /* WhatsApp Colors */
+    --whatsapp-color: #25D366;
+    --whatsapp-dark: #128C7E;
 }
 
 /* Reset & Basics */
@@ -208,6 +212,20 @@ img {
     color: white;
 }
 
+.btn-whatsapp {
+    background-color: var(--whatsapp-color) !important;
+    color: white !important;
+    border: none !important;
+    box-shadow: 0 8px 20px rgba(37, 211, 102, 0.25);
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--whatsapp-dark) !important;
+    color: white !important;
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 25px rgba(37, 211, 102, 0.35);
+}
+
 .btn-outline.border-white {
     border-color: rgba(255, 255, 255, 0.6);
     color: white;
@@ -244,6 +262,18 @@ img {
     align-items: center;
 }
 
+.logo img {
+    height: 70px;
+    width: auto;
+    max-width: 300px;
+    object-fit: contain;
+    transition: var(--transition-medium);
+}
+
+.footer-logo img {
+    height: 90px !important;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -264,8 +294,8 @@ img {
 }
 
 .nav-link {
-    font-weight: 500;
-    color: var(--text-medium);
+    font-weight: 600;
+    color: var(--text-dark);
     position: relative;
 }
 
@@ -1129,9 +1159,30 @@ img {
 
 .footer-bottom {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 24px 0;
+    padding: 40px 0 24px;
     text-align: center;
     font-size: 0.9rem;
+}
+
+.scroll-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: var(--primary-color);
+    color: white !important;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    transition: var(--transition-medium);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(151, 67, 152, 0.3);
+}
+
+.scroll-top:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(151, 67, 152, 0.4);
 }
 
 /* WhatsApp Floating */
@@ -1224,12 +1275,29 @@ img {
 }
 
 @media (max-width: 768px) {
+    .header {
+        background-color: white !important;
+        box-shadow: var(--shadow-sm);
+        padding: 10px 0;
+    }
+
+    .header.scrolled {
+        padding: 10px 0;
+    }
+
     .nav-toggle {
         display: block;
     }
 
     .header-actions .btn {
-        display: none;
+        display: inline-flex;
+        padding: 8px 14px;
+        font-size: 0.8rem;
+        gap: 5px;
+    }
+
+    .logo img {
+        height: 45px !important;
     }
 
     .nav {

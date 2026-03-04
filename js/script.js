@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Scroll Header Background
     const header = document.getElementById('header');
-    
+
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.classList.add('scrolled');
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Active Navigation Link on Scroll
     const sections = document.querySelectorAll('section[id]');
-    
+
     function scrollActive() {
         const scrollY = window.pageYOffset;
 
@@ -94,5 +94,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial check and on scroll
     revealElements();
-    window.addEventListener('scroll', revealElements);
+    // Scroll to Top Functionality
+    const scrollTop = document.querySelector('.scroll-top');
+    if (scrollTop) {
+        scrollTop.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 });
